@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>pwm_generation_pi</spirit:name>
+  <spirit:version>2.5</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>pwm_generation_pi</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7b8bde13</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>pwm_generation_pi</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7b8bde13</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>cnt_5k</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>d_time_u</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>d_time_v</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>d_time_w</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>START</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>tri_wave</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UP</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>UN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VP</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>WP</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>WN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/comparator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/deadtime.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/delay.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/triangle.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/pwm_generation.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_b012c39d</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/comparator.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/deadtime.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/delay.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/triangle.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/pwm_generation.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/pwm_generation_pi_v2_5.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>pwm_generation_pi_v2_5</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">pwm_generation_pi_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>pwm_generation_pi_v2_5</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.1</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.2</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.3</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.4</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.5</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.6</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.8</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.9</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.10</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.11</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.12</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.13</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.14</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:1.15</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:2.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:2.1</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:2.2</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:pwm_generation_pi:2.4</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2022-01-18T07:15:49Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2921b985_ARCHIVE_LOCATION">c:/2021_sip_pi/ip_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f21cef0_ARCHIVE_LOCATION">c:/2021_sip_pi/ip_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b0312aa_ARCHIVE_LOCATION">c:/2021_sip_pi/ip_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@517a9ae2_ARCHIVE_LOCATION">c:/2021_sip_pi/ip_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a7932f_ARCHIVE_LOCATION">c:/2021_sip_pi/ip_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@409c38fb_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d8996fb_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d58f089_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7fb65c_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12ccaf98_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b81229b_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33fc16e0_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5293a78a_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce34791_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a46a6f4_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc2a9d2_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35325bb1_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233c54d5_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57fa89_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50324b56_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fab3fc0_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a4c503_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2789f2c6_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ddefe8e_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@737fb153_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd2c682_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@744ea255_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73113907_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3db8535d_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14c0b2bd_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53373294_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c39c26_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef58c39_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36775898_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17023ab1_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6777d6c_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2266b1d5_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a5a44d2_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11fed4ce_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bee04b9_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33e5a38e_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dab382f_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1911785_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64848dee_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2843eaf9_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e4e2307_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691fafde_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a88844_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c19e68_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50795fca_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@82bf1b0_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e1325fd_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3891c91b_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d0b757c_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15cbb675_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d312145_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@728d73ac_ARCHIVE_LOCATION">c:/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ccdb96f_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dfc4c54_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@475a130_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33408d58_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6418681e_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e96b99_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26ff4a84_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2265cbfc_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bef0e2d_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@410ad5dc_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22355363_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a32ddc_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cdb448c_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1469b7c_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54c57644_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3611bb14_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d81cd5e_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20c64358_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7041decb_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dded3a1_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65e7966b_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a354cb0_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1146b879_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc066f1_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39e7bdc8_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38da77fd_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ae20be_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bd1892f_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8753fdb_ARCHIVE_LOCATION">c:/ver6_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fb592e7_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20df23ce_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74fa1bad_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b0033f_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dacf06a_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c4b011e_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e9ead15_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6740a005_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b801353_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67a5f64e_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a6171d_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c34929_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@313be4a0_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3ad21a_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a96a539_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512e432f_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521fa99_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e33433_ARCHIVE_LOCATION">c:/ver13_1_20k/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17416345_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bdb3a7_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2825fb5f_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5feb2801_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebb122e_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d9ff984_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@860a747_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198b278d_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@170154d9_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bf28baf_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@120575b7_ARCHIVE_LOCATION">c:/SIP_main_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2380d19b_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c9fa1af_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@187c9cae_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@779ef154_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@357d17fb_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7774f795_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111e3535_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bc6d011_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50874d88_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@571df98e_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c51eac7_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d0b1530_ARCHIVE_LOCATION">c:/SIP_main_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31539957_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@494c7ada_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16cde244_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f21110b_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10477344_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@480a039c_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2039ccdf_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c8c4c9e_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b2de9be_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67b699f6_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f80aeaa_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b93b2d0_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a869b19_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@668cf6d_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@144ccc52_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ecc44c_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d997827_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7835c62a_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41288c85_ARCHIVE_LOCATION">c:/SIP_main_60_ver1/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677a0558_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c40c363_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1110a9c4_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4b1733_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464b1f9c_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20012da3_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32226529_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eb1972f_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9482eb_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1334667a_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae9c79a_ARCHIVE_LOCATION">c:/SIP_main_nominal_ver2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b45324_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@148c1d61_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@440e97a9_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f47293a_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11281f8_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74de04d7_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dca5ced_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d77b07_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6822715e_ARCHIVE_LOCATION">c:/SIP_main_400_IL1_U_12_5M2/2021_SIP_PI/IP_blocks/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a001358_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef1c7e7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc39d6c_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@286e93a8_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624cb2b6_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa00cc7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b0ba468_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a56005b_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d271a2_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29ff9851_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a0b5438_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7efca543_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed3230e_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e856111_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b60ead0_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4362641b_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3942a204_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e03509_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72974f5a_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@febf045_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ec1e20c_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fef9d01_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f4bf596_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406566c7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f87358c_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@baf404c_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34519ca3_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51acf9da_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@349a5065_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48a85a97_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12072cf7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@327f1212_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@444df2c5_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2c273b_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b73da47_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f7f621_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67679254_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d826960_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@551205ed_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3277faf4_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5666dbf9_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e42dc53_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b2d6447_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf238f8_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2413171f_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e2220de_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f96068c_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b3e9a29_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@544c98e9_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7958b75_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19539220_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cf57ef0_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f5565d2_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71c93a3e_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@253392c9_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@722f0569_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b35e2d8_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ef1dc8_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@741c791_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b56d98_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e20be2_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28c65901_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9ed8b9_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2240f1ef_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@476964f7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8a1e2c9_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@587981e8_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dcd1790_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b52670a_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a85fc4_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aeebcc7_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b3a4ad_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6c2a26_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1089155f_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51da274e_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fda464_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a4c5975_ARCHIVE_LOCATION">c:/RTS_USPM_MSSRDBDC/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25938381_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bd6c794_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c68eb67_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ddd13f8_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b19c0bd_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1432f60f_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266c3ee0_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eaa3d1b_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bb4831a_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e8c738_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7045cd93_ARCHIVE_LOCATION">c:/USPMcontroller_sample7_37_5MAD_DA/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d3a66a_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb57dc5_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a5ed6d6_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a214d7e_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b68e8a9_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6835290f_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3667eeb6_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7106a5_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@566359b6_ARCHIVE_LOCATION">c:/SRDBDC_1027_1/USPMcontroller_sample5_ADC_mid/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260efe41_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12ae4832_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69a755ac_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22e573_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e1868e_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d72cfa_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a020c44_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3906c845_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75761749_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19006984_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2163cc8e_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@623a1d21_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d65121_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15ce66ad_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14db9042_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6728724d_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@777944b1_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a8d6c3_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28fc31e3_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ae9538e_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5694a16f_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec4a5a9_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@650e22b4_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ad4ffe_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@702cb43e_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b74c063_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6ce0b4_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531192c5_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8d6898a_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13794818_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d33649_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a221302_ARCHIVE_LOCATION">e:/VivadoProject/PMSM_USPM_ver4/ip_repo/pwm_generation_pi</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a88d4390"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6e2d61b6"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4d8d7995"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="12359885"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
